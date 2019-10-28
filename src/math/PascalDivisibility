@@ -1,0 +1,7 @@
+ll pascalDivisibility(ll n, ll p)
+{    ll ans = 1; ll i = 0;
+     while (n){ 
+     ans = (sum(n%p) % MOD)*(powMod(sum(p), i) % MOD) + ((n%p + 1) % MOD)*(ans%MOD); 
+     ans %= MOD; n /= p; i++; }
+     return ans%MOD; 
+   }
